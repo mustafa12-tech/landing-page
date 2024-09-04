@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Landing Page</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: #444;
+        overflow-x: hidden;
+      }
+
+      header {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        position: relative;
+        z-index: 1000;
+        animation: slide-down 1s ease-out;
+      }
+
+      @keyframes slide-down {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0;
+        animation: fade-in 1.5s ease-in-out;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        transition: background-color 0.3s, transform 0.3s;
+        border-radius: 5px;
+      }
+
+      nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+      }
+
+      section {
+        padding: 60px 20px;
+        margin: 20px 0;
+        animation: fade-up 1s ease-out;
+      }
+
+      @keyframes fade-up {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      section#about {
+        background-color: #f9f9f9;
+        color: #333;
+        text-align: center;
+      }
+
+      section#about h2 {
+        margin-bottom: 20px;
+      }
+
+      section#about p {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      section#services {
+        background-color: #fff;
+        background-image: url("bag.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+      }
+
+      section#services h2 {
+        margin-bottom: 40px;
+        color: #fff;
+      }
+
+      .service {
+        display: inline-block;
+        width: 30%;
+        margin: 15px 1.5%;
+        vertical-align: top;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .service:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .service img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        transition: transform 0.3s;
+      }
+
+      .service:hover img {
+        transform: scale(1.05);
+      }
+
+      .service p {
+        font-size: 1.2em;
+      }
+
+      button {
+        background-color: #ff7e5f;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        margin-top: 20px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      button:hover {
+        background-color: #feb47b;
+        transform: translateY(-3px);
+      }
+
+      button:active {
+        transform: translateY(1px);
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+        animation: fade-in 1.5s ease-in-out;
+      }
+
+      footer a {
+        color: #4caf50;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          margin: 10px 0;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+
+        .service {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Our Service</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        We provide top-tier services to help you succeed. Discover more about
+        what we do and how we can assist you.
+      </p>
+      <button onclick="alert('Thank you for your interest!')">Read More</button>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service">
+        <img src="WhatsApp Image 2024-08-28 at 19.26.04.jpeg" alt="Service 1" />
+        <p>User Experience</p>
+      </div>
+      <div class="service">
+        <img src="WhatsApp Image 2024-08-28 at 19.25.43.jpeg" alt="Service 2" />
+        <p>Creative Design</p>
+      </div>
+      <div class="service">
+        <img src="WhatsApp Image 2024-08-28 at 19.25.25.jpeg" alt="Service 3" />
+        <p>Retina Ready</p>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <p>Contact us at <a href="mailto:xyz@example.com">xyz@example.com</a></p>
+    </footer>
+  </body>
+</html>
